@@ -6,6 +6,7 @@ string script   # script number (string value for print)
 string SCRIPT_GRASP = grasp
 string SCRIPT_RELEASE = release
 string SCRIPT_CANCEL = cancel
+string SCRIPT_SUCTION = suction
 
 uint8  current  # grasping current setting[%]
 ---

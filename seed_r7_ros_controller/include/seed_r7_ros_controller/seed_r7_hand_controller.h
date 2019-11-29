@@ -27,6 +27,7 @@ private:
   const uint16_t SCRIPT_GRASP = 2;
   const uint16_t SCRIPT_UNGRASP = 3;
   const uint16_t SCRIPT_CANCEL = 4;
+  const uint16_t SCRIPT_SUCTION = 5;
 
 
 };

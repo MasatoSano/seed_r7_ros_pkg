@@ -57,6 +57,8 @@ bool robot_hardware::HandController::HandControlCallback
     script_number = SCRIPT_UNGRASP;
   else if (_req.script == seed_r7_ros_controller::HandControl::Request::SCRIPT_CANCEL)
     script_number = SCRIPT_CANCEL;
+  else if (_req.script == seed_r7_ros_controller::HandControl::Request::SCRIPT_SUCTION)
+    script_number = SCRIPT_SUCTION;
   else {
     ROS_ERROR("please input \"grasp\", \"release\" or \"cancel\".");
     _res.result = "service call failed";
