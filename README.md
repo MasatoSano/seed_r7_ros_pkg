@@ -38,20 +38,20 @@ rosdep install -y -r --from-paths src --ignore-src
 catkin build seed_r7_ros_pkg
 source ~/.bashrc
 ```
-### <a name = "udev_setting"> 2. UDEV Setting (if you have a robot)   
-If your robot's USB is not registerd on your PC, you have to do it.
-(In case of registered, ``/etc/udev/rules.d/90-aero.rules`` is exist.)
+### <a name = "udev_setting"> 2. Udev Setting (if you have a robot)   
+If you still have not registered the robot's USB for your PC, you have to do it.
+(When you register that, ``/etc/udev/rules.d/90-aero.rules`` need to be exist.)
 Firstly, connect the robot's USB to your PC, and run the following command.    
 ```
 rosrun seed_r7_bringup make_udev_install.py
 ```
-Secondly, please remove and insert the USB.
-When run ``ls -l /dev/aero*``, it's OK if USB is recognized as bellow:
+Secondly, please disconnect and reconnect the USB.
+When you run ``ls -l /dev/aero*``, the follwing message will appear if USB is recognized:
 ```
 /dev/aero_upper -> ttyUSB0
 /dev/aero_lower -> ttyUSB1
 ```
-The number of ttyUSB may not be same, but it's no problem.
+The number of ttyUSB may not be same, but there is no problem.
 
 ## How to launch
 ### Bring up ros_control ( without / with real robot )
